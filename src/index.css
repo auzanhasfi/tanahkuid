@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", sans-serif;
+  
+  --color-brand-primary: #6B4F3A; /* earth-deep */
+  --color-brand-secondary: #8B6B52; /* earth-mid */
+  --color-brand-accent: #D9C2A7; /* earth-light */
+  --color-brand-cream: #FDFBF9; /* cream-bg */
+  --color-brand-text: #2D241E; /* text-main */
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-text font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+.glass-nav {
+  @apply bg-white/90 backdrop-blur-md border-b border-brand-primary/10;
+}
+
+.sticky-bottom-nav {
+  @apply fixed bottom-5 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-lg border border-brand-primary/10 px-8 py-3 rounded-full shadow-[0_10px_40px_rgba(0,0,0,0.1)] z-50 md:hidden flex justify-between gap-10 min-w-[320px];
+}
+
+.card-theme {
+  @apply bg-white border border-brand-primary/5 shadow-[0_4px_20px_rgba(0,0,0,0.02)] rounded-[20px] transition-all duration-300;
+}
+
+.btn-premium {
+  @apply bg-brand-primary text-white rounded-full font-semibold shadow-[0_4px_12px_rgba(107,79,58,0.2)] hover:shadow-lg transition-all;
+}
+
+.earth-gradient {
+  background: linear-gradient(135deg, #6B4F3A 0%, #8B6B52 100%);
+}
